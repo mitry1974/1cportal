@@ -1,0 +1,15 @@
+extends ../layouts/application.pug
+
+block content
+  table.table.table-striped
+    thead
+      tr
+        th= t('users.fullName')
+        th= t('users.email')
+        th= t('users.createdAt')
+    tbody
+      each user in users
+        tr
+          td= user.fullName
+          td= user.email
+          td= user.createdAt
